@@ -1,0 +1,58 @@
+.login
+{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(31, 15, 15, 0.5), rgba(139, 117, 117, 0.5)), url("C:/Users/Mukul/Desktop/Projects/my_app/src/Pics/visiting.webp");
+    background-size: cover;
+    align-items: center;
+}
+.logintitle
+{
+    font-size: 50px;
+}
+
+.loginform
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginform > label
+{
+    margin: 10px 0;
+}
+.loginInput
+{
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+}
+
+.loginbutton
+{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.registerbutton
+{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: lightcoral;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+

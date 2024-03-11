@@ -1,0 +1,86 @@
+.sidebar
+{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.sideBarItem
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebartitle
+{
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: 1 solid #a7a4a4;
+    border-bottom: 1 solid #a7a4a4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: #222;
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+    justify-content: inherit;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+.sideBarItem > img
+{
+    margin-top: 15px;
+    width: 80%;
+    height: 80%;
+}
+
+.sideBarItem > p
+{
+    padding: 30px;
+    font-size: 14px;
+    font-family: "Marko One", serif;
+    
+}
+
+.sidebarlist
+{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebarlistItem
+{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.sidebarsocial
+{
+    margin-top: 15px;
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialItem
+{
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}

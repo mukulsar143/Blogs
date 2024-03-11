@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./NavBar/Navbar";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+import Settings from "./Pages/Settings/Settings";
+import Write from "./Pages/Write/Write";
+import Home from "./Pages/Home/Home";
+import SinglePage from "./Pages/SinglePG/SinglePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from "./Pages/Contact/Contact";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/register" element={<Register />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/login" element={<Login />}></Route>
+        <Route exact path="/settings" element={<Settings />}></Route>
+        <Route exact path="/write" element={ <Write />}></Route>
+        <Route exact path="/contact" element={ <Contact />}></Route>
+        <Route
+          exact
+          path="/singlepage/:uuid"
+          element={<SinglePage />}
+        ></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

@@ -1,0 +1,85 @@
+.top
+{
+    margin: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: "Goblin One", serif;
+    z-index: 999;
+    margin-left: 20px;
+}
+
+.topLeft 
+{
+    flex: 3;
+    margin-left: 10px;
+
+}
+
+
+.topCenter
+{
+    flex: 8;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.topicon
+{
+    font-size: 30px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.topRight 
+{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topimg
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+.topList
+{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topListitem
+{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+button {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: aliceblue;
+}

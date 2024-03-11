@@ -1,0 +1,109 @@
+.settings
+{
+    display: flex;
+}
+
+.settingwrap
+{
+    flex: 9;
+    padding: 20px;
+}
+
+.settingstitle
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingsupdatetitle
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: lightseagreen;
+    margin-left: 10px;
+
+}
+
+.settingsform
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.settingsPP
+{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.settingsPP > img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-left: 10px;
+
+}
+
+.textinput
+{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    padding: 40px;
+}
+
+.settingsppicon
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.settingsform > label
+{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.settingsform > input
+{
+    color: gray;
+    margin: 20px 0;
+    height: 30px;
+    border: none;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+
+}
+
+.settingsubmit
+{
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+}
