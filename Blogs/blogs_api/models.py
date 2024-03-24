@@ -19,7 +19,7 @@ class Blogs(BaseModel):
     title = models.CharField(max_length = 50)
     descriptions = models.TextField()
     image = models.FileField(upload_to='blog')
-    
+    created_at = models.DateField(auto_now_add=True) 
     
     def __str__(self) -> str:
         return self.title

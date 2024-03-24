@@ -36,7 +36,7 @@ class RegisterApi(APIView):
         data = request.data
         
         obj = User.objects.filter(id = data.get('id'))
-        if not obj.exists():
+        if not obj.exists(): 
             return Response({'errors' : "Invalid id"})
         
         serializer = UserRegister(obj[0], data=data, partial = True)

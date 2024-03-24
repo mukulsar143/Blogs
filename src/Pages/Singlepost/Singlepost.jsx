@@ -8,7 +8,7 @@ export default function Singlepost() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/blogs/api/publishblogs/${uuid  }`, {
+    fetch(`http://127.0.0.1:8000/blogs/api/publishblogs/${uuid}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,9 +17,9 @@ export default function Singlepost() {
     })
       .then((res) => res.json())
       .then((resp) => {
-        if (localStorage.getItem("token"))
+        if (resp.success)
         {
-          setBlog(resp);
+          setBlog(resp.data);
           console.log(resp);
         }
         else {
@@ -49,7 +49,7 @@ export default function Singlepost() {
             <span className="singlepostauthor">
               Author : <b>HRX</b>
             </span>
-            <span className="singlepostauthor"> 1 Hour Ago</span>
+            <span className="singlepostauthor">{row.created_at}</span>
           </div>
           <p className="singlepostdesc">
             {row.descriptions}

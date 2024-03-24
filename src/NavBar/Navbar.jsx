@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./navbar.css"; // Correct the CSS import path
+import "./navbar.css"; 
+import logo from "../Pics/new.jpg";
+
 
 export default function Navbar() {
   const user = localStorage.getItem("token");
   const navigate = useNavigate();
-  const [image, setImage] = useState([]);
 
   const handleLogout = () => {
     if (localStorage.getItem("token")) {
@@ -14,22 +14,6 @@ export default function Navbar() {
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://127.0.0.1:8000/accounts/register/");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const data = await response.json();
-        setImage(data.profile_picture);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        alert("Something went wrong");
-      }
-    };
-    fetchData();
-  }, []);
 
   return (
     <div className="top">
@@ -46,8 +30,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="topListitem">
-            <Link className="link" to="/write">
-              WRITE
+            <Link className="link" to="/dashboard">
+              DASHBOARD
             </Link>
           </li>
           <li className="topListitem">
@@ -61,13 +45,11 @@ export default function Navbar() {
       <div className="topRight">
         {user ? (
           <>
-              <Link className="link" to="/settings">
                 <img
-                  src={`http://127.0.0.1:8000/${image}`}
+                  src={logo}
                   alt="hrithik"
                   className="topimg"
                 />
-              </Link>
             <ul className="topList">
               <li className="topListitem">
                 <button onClick={handleLogout}>

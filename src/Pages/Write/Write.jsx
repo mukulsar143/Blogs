@@ -1,6 +1,8 @@
 import "./write.css";
 import logo from "../../Pics/blog3.jpg";
 import { useState } from "react";
+import Swal from "sweetalert2";
+
 
 export default function Write() {
   const [blogs, setBlogs] = useState({ title: "", descriptions: "" });
@@ -18,10 +20,10 @@ export default function Write() {
     formData.append("descriptions", blogs.descriptions);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/blogs/api/", {
+      const res = await fetch("http://127.0.0.1:8000/blogs/api/blogs/", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `  Bearer ${localStorage.getItem("token")}`,
         },
         body: formData,
       });
@@ -31,7 +33,9 @@ export default function Write() {
       }
 
       const json = await res.json();
+      Swal.fire("Added", "Your file has been Added", "success");
       console.log(json);
+      setBlogs()
       // Update state if necessary
     } catch (error) {
       console.error("Error submitting blog:", error);
@@ -56,7 +60,6 @@ export default function Write() {
           />
           <input
             name="title"
-            value={blogs.title}
             onChange={onChangeBlog}
             type="text"
             placeholder="Title"
@@ -67,7 +70,6 @@ export default function Write() {
         <div className="formgroup">
           <textarea
             name="descriptions"
-            value={blogs.descriptions}
             onChange={onChangeBlog}
             placeholder="Tell Story...."
             type="text"

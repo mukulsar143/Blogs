@@ -8,6 +8,7 @@ import Home from "./Pages/Home/Home";
 import SinglePage from "./Pages/SinglePG/SinglePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./Pages/Contact/Contact";
+import Dashboard from "./Pages/DashBoard/Dashboard";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route exact path="/settings" element={<Settings />}></Route>
         <Route exact path="/write" element={ <Write />}></Route>
         <Route exact path="/contact" element={ <Contact />}></Route>
+        <Route exact path="/dashboard" element={ <Dashboard />}></Route>
         <Route
           exact
           path="/singlepage/:uuid"

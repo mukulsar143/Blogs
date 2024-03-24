@@ -38,7 +38,7 @@ export default function Post() {
     {blog.map((row)=>{
       return (
         <div className="post" key={row.uuid}>
-        <img src={`http://127.0.0.1:8000${row.image}`} alt="" className="postimage" />
+        <img src={`http://127.0.0.1:8000/${row.image}`} alt="" className="postimage" />
         <div className="postinfo">
           <div className="postcat">
             <span className="postspan">Music</span>
@@ -48,7 +48,7 @@ export default function Post() {
             <span className="posttitle">{row.title}.</span>
           </Link>
           <hr />
-          <span className="postdate">1 hour</span>
+          <span className="postdate">{row.created_at}</span>
         </div>
         <p className="postdesc">
           {row.descriptions}
